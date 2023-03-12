@@ -81,7 +81,7 @@ const images = [
   },
   {
     id: 17,
-    img: '../../images/levander.jpg',
+    img: '../../images/lavender.jpg',
     category: ['nature', 'flower', 'flowers', 'blossom', 'purple'],
   },
   {
@@ -130,3 +130,4 @@ const images = [
     category: ['nature', 'stones', 'blue', 'red'],
   },
 ];
+export default images;
