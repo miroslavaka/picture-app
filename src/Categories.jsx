@@ -1,25 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Categories = ({ filterItems }) => {
+const Categories = ({ filterItems, active, tabs }) => {
+  //console.log('activeClass: ', activeClass);
   return (
     <div className="categories">
-      <nav>
-        <ul>
+      <nav className="menu">
+        <ul className="menu__list">
           <li
+            className={`menu__item ${active ? 'active-nav' : ''}`}
             onClick={() => {
               filterItems('all');
             }}
           >
             All
           </li>
-          <li
-            onClick={() => {
-              filterItems('fruits');
-            }}
-          >
-            Fruits
-          </li>
-          <li
+          {tabs.map((tab, index) => {
+            return (
+              <li
+                key={index}
+                className={`menu__item ${active ? 'active-nav' : ''}`}
+                onClick={() => {
+                  filterItems(tab);
+                }}
+              >
+                {tab}
+              </li>
+            );
+          })}
+
+          {/* <li
+            className={`menu__item ${active ? 'active-nav' : ''}`}
             onClick={() => {
               filterItems('flowers');
             }}
@@ -27,6 +37,7 @@ const Categories = ({ filterItems }) => {
             Flowers
           </li>
           <li
+            className={`menu__item ${active ? 'active-nav' : ''}`}
             onClick={() => {
               filterItems('birds');
             }}
@@ -34,6 +45,7 @@ const Categories = ({ filterItems }) => {
             Birds
           </li>
           <li
+            className={`menu__item ${active ? 'active-nav' : ''}`}
             onClick={() => {
               filterItems('insect');
             }}
@@ -41,12 +53,13 @@ const Categories = ({ filterItems }) => {
             Insect
           </li>
           <li
+            className={`menu__item ${active ? 'active-nav' : ''}`}
             onClick={() => {
               filterItems('stones');
             }}
           >
             Stones
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

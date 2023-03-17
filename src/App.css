@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
 *,
 :after,
 :before {
@@ -8,6 +10,7 @@
 
 html {
   font-size: 100%;
+  font-family: 'Sono', sans-serif;
 }
 
 #root {
@@ -54,10 +57,10 @@ h5 {
 }
 .title__underline {
   background: yellowgreen;
-  width: 7rem;
+  width: 10rem;
   height: 0.25rem;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 690px) {
@@ -72,7 +75,7 @@ h5 {
   }
 }
 .categories {
-  margin: 1rem 0 2.5rem;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -91,4 +94,31 @@ h5 {
 }
 .pictures__img:hover {
   transform: scale(1.2);
+}
+.menu__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.menu__item {
+  margin: 0.85rem 1rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.menu__item:hover {
+  transform: scale(1.3);
+}
+.menu__list .active-nav {
+  color: yellowgreen;
+}
+.search {
+  margin-bottom: 2rem;
+}
+.search input {
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid yellowgreen;
+  font-family: 'Sono', sans-serif;
+  color: lightgray;
+  border-radius: 0.2rem;
 }
