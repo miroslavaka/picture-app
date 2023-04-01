@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Categories = ({ filterItems, active, tabs }) => {
   //console.log('activeClass: ', activeClass);
@@ -22,6 +22,7 @@ const Categories = ({ filterItems, active, tabs }) => {
                 onClick={() => {
                   filterItems(tab);
                 }}
+                value={tab}
               >
                 {tab}
               </li>

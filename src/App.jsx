@@ -13,6 +13,22 @@ function App() {
   const [items, setItems] = useState(images);
   const [isActive, setIsActive] = useState(false);
   const [tabs, setTabs] = useState(mainTabs);
+  //const [query, setQuery] = useState('');
+  // const [state, setState] = useState({
+  //   query: '',
+  //   list: [],
+  // });
+
+  const searchItems = (e) => {
+    //setQuery(e.target.value);
+
+    const query = e.target.value.toLowerCase();
+    console.log(query);
+
+    query === ''
+      ? setItems(images)
+      : setItems(images.filter((item) => item.category.includes(query)));
+  };
 
   const filterItems = (category) => {
     console.log('category: ', category);
@@ -45,7 +61,7 @@ function App() {
       <Categories filterItems={filterItems} active={isActive} tabs={tabs} />
 
       {/* search */}
-      <Search />
+      <Search searchItems={searchItems} />
 
       {/* pictures */}
       <Pictures items={items} />
