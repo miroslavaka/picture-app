@@ -6,22 +6,15 @@ import images from './data';
 
 import './App.css';
 
-const mainTabs = [...new Set(images.map((item) => item.mainCategory))];
+const mainTabs = ['all', ...new Set(images.map((item) => item.mainCategory))];
 console.log('active tabs: ', mainTabs);
 
 function App() {
   const [items, setItems] = useState(images);
   const [isActive, setIsActive] = useState(false);
   const [tabs, setTabs] = useState(mainTabs);
-  //const [query, setQuery] = useState('');
-  // const [state, setState] = useState({
-  //   query: '',
-  //   list: [],
-  // });
 
   const searchItems = (e) => {
-    //setQuery(e.target.value);
-
     const query = e.target.value.toLowerCase();
     console.log(query);
 
@@ -34,6 +27,7 @@ function App() {
     console.log('category: ', category);
     if (category === 'all') {
       setItems(images);
+      setTabs('all');
       return;
     }
 
@@ -46,6 +40,7 @@ function App() {
 
     if (category === clickedTab[0]) {
       setIsActive(true);
+      setTabs(clickedTab);
       return;
     }
   };
@@ -58,7 +53,12 @@ function App() {
       </div>
 
       {/* navigation */}
-      <Categories filterItems={filterItems} active={isActive} tabs={tabs} />
+      <Categories
+        filterItems={filterItems}
+        active={isActive}
+        tabs={mainTabs}
+        activeTab={tabs}
+      />
 
       {/* search */}
       <Search searchItems={searchItems} />
