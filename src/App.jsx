@@ -4,7 +4,7 @@ import Pictures from './Pictures';
 import Search from './Search';
 import images from './data';
 
-import './App.css';
+import './style.css';
 
 const mainTabs = ['all', ...new Set(images.map((item) => item.mainCategory))];
 console.log('active tabs: ', mainTabs);
@@ -27,7 +27,7 @@ function App() {
     console.log('category: ', category);
     if (category === 'all') {
       setItems(images);
-      setTabs('all');
+      setTabs(['all']);
       return;
     }
 
@@ -46,9 +46,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <div className="title">
-        <h1>select category</h1>
+        <h1 className="title__h">Beauty of Nature</h1>
+        <p className="title__p">(select category)</p>
         <div className="title__underline"></div>
       </div>
 

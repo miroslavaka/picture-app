@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 
-/* *,
+*,
 :after,
 :before {
   margin: 0;
@@ -18,10 +18,11 @@ html {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-} */
+}
 
-.App {
+.app {
   padding: 3rem 0;
+  font-family: 'Sono', sans-serif;
 }
 
 h1,
@@ -55,35 +56,41 @@ h4 {
 h5 {
   font-size: 1.25rem;
 }
+.title {
+  text-align: center;
+  line-height: 2.4rem;
+}
+.title__p {
+  color: lightgray;
+}
 .title__underline {
   background: yellowgreen;
   width: 10rem;
   height: 0.25rem;
   margin: 0 auto;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 690px) {
-  .App {
-    padding: 3rem 2rem;
+  .app {
+    padding: 3rem 1.5rem;
   }
-
   .pictures {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 960px) {
-  .App {
-    padding: 3rem 4rem;
+  .app {
+    padding: 3rem 2rem;
   }
   .pictures {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1150px) {
-  .App {
-    padding: 3rem 6.5rem;
+  .app {
+    padding: 3rem;
   }
 }
 .categories {
@@ -127,6 +134,16 @@ h5 {
 
 .search {
   margin-bottom: 2rem;
+}
+.search__input {
+  margin-bottom: 1.1rem;
+}
+.search__p {
+  color: lightgray;
+  font-size: x-small;
+  margin: auto;
+  text-align: center;
+  width: 50%;
 }
 .search input {
   padding: 0.5rem;

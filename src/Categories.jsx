@@ -19,11 +19,7 @@ const Categories = ({ filterItems, active, tabs, activeTab }) => {
               <li
                 key={index}
                 className={`menu__item ${
-                  tab === 'all'
-                    ? 'active-nav'
-                    : tab === activeTab[0]
-                    ? 'active-nav'
-                    : ''
+                  tab === activeTab[0] ? 'active-nav' : ''
                 }`}
                 onClick={() => {
                   filterItems(tab);
