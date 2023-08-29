@@ -37,7 +37,7 @@ const images = [
     category: ['nature', 'bird', 'animal', 'yellow', 'pink'],
     mainCategory: 'birds',
     description:
-      '5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta dui eget dui laoreet feugiat. Donec ut efficitur est, at volutpat arcu. In fermentum ultrices sapien, eget ullamcorper tortor pharetra nec. In non magna ut orci accumsan convallis vitae ut velit. Sed non erat quis nunc rhoncus luctus in in ante.',
+      '5. Lorem ipsum dolor sit amet. Proin porta dui eget dui laoreet feugiat. Donec ut efficitur est, at volutpat arcu. In fermentum ultrices sapien, eget ullamcorper tortor pharetra nec. In non magna ut orci accumsan convallis vitae ut velit. Sed non erat quis nunc rhoncus luctus in in ante.',
   },
   {
     id: 6,
